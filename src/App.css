@@ -3,12 +3,29 @@ body {
 }
 .weather-app {
   background: rgba(0, 0, 0, 0.3);
-  margin: 5rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   width: 30rem;
   border-radius: 2rem;
-  height: 40rem;
+  height: 35rem;
   text-align: center;
   padding-top: 1rem;
+  transition: 1;
+}
+.warm {
+  transition: 1s;
+  background: url("./warm.jpg");
+  background-size: cover;
+}
+.cold {
+  transition: 1s;
+  background: url("./cold.jpg");
+  background-size: cover;
+}
+.no-city {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: bolder;
+  color: white;
 }
 .city-input {
   height: 1.889rem;

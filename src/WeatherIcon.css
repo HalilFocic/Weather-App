@@ -1,0 +1,9 @@
+.forecast-icon {
+  font-size: 5rem;
+}
+.forecast-name {
+  font-weight: bolder;
+  font-style: italic;
+  position: relative;
+  bottom: 1rem;
+}

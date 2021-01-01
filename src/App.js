@@ -21,7 +21,11 @@ const App = () => {
     fetchData();
   };
   return (
-    <main className="weather-app">
+    <main
+      className={`weather-app ${
+        results ? (results.main.temp > 15 ? "warm" : "cold") : ""
+      }`}
+    >
       <div className="form">
         <form onSubmit={handleSubmit}>
           <input
@@ -36,7 +40,13 @@ const App = () => {
         </form>
       </div>
       <section className="results">
-        <p>{results ? <WeatherApp {...results} /> : "picka"}</p>
+        <div>
+          {results ? (
+            <WeatherApp {...results} />
+          ) : (
+            <div className="no-city">No city selected</div>
+          )}
+        </div>
       </section>
     </main>
   );
