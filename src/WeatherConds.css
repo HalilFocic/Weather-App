@@ -1,0 +1,7 @@
+.weather-cons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 7rem 1rem 7rem;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+}
