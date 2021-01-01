@@ -65,3 +65,8 @@ body {
   cursor: pointer;
   background: orangered;
 }
+@media only screen and (max-width: 900px) {
+  .weather-app {
+    width: 21rem;
+  }
+}
