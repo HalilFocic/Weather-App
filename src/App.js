@@ -10,6 +10,7 @@ const test =
 const App = () => {
   const [city, setCity] = useState("");
   const [results, setResults] = useState(null);
+  const [message, setMessage] = useState("Search a city!");
   const fetchData = async () => {
     const response = await fetch(
       url + city + "&appid=" + apiKey + "&units=metric"
@@ -28,7 +29,7 @@ const App = () => {
     <main
       className={`weather-app ${
         results
-          ? results.code === "200"
+          ? results.cod === 200
             ? results.main.temp > 15
               ? "warm"
               : "cold"
@@ -52,7 +53,7 @@ const App = () => {
       <section className="results">
         <div>
           {results ? (
-            results.code === "200" ? (
+            results.cod === 200 ? (
               <WeatherApp {...results} />
             ) : (
               <div className="error">
@@ -63,7 +64,7 @@ const App = () => {
               </div>
             )
           ) : (
-            <div className="no-city">No city selected</div>
+            <div className="no-city">Search a city!</div>
           )}
         </div>
       </section>
