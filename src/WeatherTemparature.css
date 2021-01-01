@@ -1,0 +1,18 @@
+.temparature {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.temp-block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.temp {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+.main-temp {
+  font-size: 2rem;
+}
