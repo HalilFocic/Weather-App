@@ -17,7 +17,7 @@ const WeatherApp = (result) => {
       </h1>
       <WeatherIcon forecast={forecast} />
       <WeatherTemparature {...result.main} />
-      <WeatherConds {...result.main} />
+      <WeatherConds {...result.main} {...result.wind} />
     </>
   );
 };

@@ -4,6 +4,7 @@ import { FiSun } from "react-icons/fi";
 import { RiHazeFill } from "react-icons/ri";
 import { FaRegSnowflake, FaCloudRain } from "react-icons/fa";
 import { GiFog } from "react-icons/gi";
+
 import "./WeatherIcon.css";
 const icons = {
   Clouds: <IoCloudSharp />,

@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import WeatherCard from "./WeatherCard";
 import WeatherApp from "./WeatherCard";
+import { MdError } from "react-icons/md";
 const apiKey = "9089186cf58c3f6edb2715df96895f63";
 const url = "https://api.openweathermap.org/data/2.5/weather?q=";
 const test =
@@ -18,12 +19,21 @@ const App = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchData();
+    if (city) fetchData();
+    else {
+      alert("Please enter a value!");
+    }
   };
   return (
     <main
       className={`weather-app ${
-        results ? (results.main.temp > 15 ? "warm" : "cold") : ""
+        results
+          ? results.code === "200"
+            ? results.main.temp > 15
+              ? "warm"
+              : "cold"
+            : ""
+          : ""
       }`}
     >
       <div className="form">
@@ -42,7 +52,16 @@ const App = () => {
       <section className="results">
         <div>
           {results ? (
-            <WeatherApp {...results} />
+            results.code === "200" ? (
+              <WeatherApp {...results} />
+            ) : (
+              <div className="error">
+                Looks like that city doesn't exist
+                <span className="error-span">
+                  <MdError />
+                </span>
+              </div>
+            )
           ) : (
             <div className="no-city">No city selected</div>
           )}

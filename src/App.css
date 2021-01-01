@@ -1,6 +1,19 @@
 body {
   background-image: url("./background.jpg");
 }
+.error {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  background: rgba(255, 0, 0, 0.795);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+}
+.error-span {
+  margin-left: 1rem;
+}
 .weather-app {
   background: rgba(0, 0, 0, 0.3);
   margin: 2rem auto 0 auto;
