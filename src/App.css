@@ -4,11 +4,10 @@ body {
 .error {
   margin-top: 2rem;
   font-size: 1.2rem;
-  background: rgba(255, 0, 0, 0.795);
+  background: rgba(255, 0, 0, 0.595);
   margin-left: 2rem;
   margin-right: 2rem;
   padding: 0.5rem;
-  border-radius: 1rem;
   color: white;
 }
 .error-span {
